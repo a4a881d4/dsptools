@@ -58,7 +58,8 @@ class TransposedStreamingTester(c: TransposedStreamingFIR[SInt])
 }
 
 class TransposedStreamFIRSpec extends FlatSpec with Matchers {
-  "ConstantTapTransposedStreamingFIR" should "compute a running average like thing" in {
+  behavior of "ConstantTapTransposedStreamingFIR"
+  ignore should "compute a running average like thing" in {
     val taps = (0 until 3)
 
     chisel3.iotesters.Driver.execute(Array("--is-verbose"),
