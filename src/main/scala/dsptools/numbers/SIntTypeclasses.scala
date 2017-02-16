@@ -74,7 +74,7 @@ trait SIntSigned extends Any with Signed[SInt] with hasContext {
   }
 
   /** An idempotent function that ensures an object has a non-negative sign. */
-  def abs(a: SInt): SInt = a.abs().zext()
+  def abs(a: SInt): SInt = a.abs()
 }
 trait SIntIsReal extends Any with IsIntegral[SInt] with SIntOrder with SIntSigned with hasContext {
   def toDouble(a: SInt): DspReal = ???
