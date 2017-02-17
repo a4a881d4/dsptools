@@ -21,8 +21,8 @@ trait FixedPointRing extends Any with Ring[FixedPoint] with hasContext {
   def times(f: FixedPoint, g: FixedPoint): FixedPoint = {
     f * g
   }
-  def one: FixedPoint = FixedPoint.fromBigInt(BigInt(1), binaryPoint = 0)
-  def zero: FixedPoint = FixedPoint.fromBigInt(BigInt(0), binaryPoint = 0)
+  def one: FixedPoint = FixedPoint.fromBigInt(BigInt(1), binaryPoint = 0.BP)
+  def zero: FixedPoint = FixedPoint.fromBigInt(BigInt(0), binaryPoint = 0.BP)
   def negate(f: FixedPoint): FixedPoint = -f
   override def minus(f: FixedPoint, g: FixedPoint): FixedPoint = {
     f - g
